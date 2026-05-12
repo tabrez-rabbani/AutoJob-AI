@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Environment Variables (secrets — never commit)
+.env
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Sessions (browser cookies)
+sessions/
+
+# Alembic
+alembic/versions/__pycache__/
+
+# Tests
+.pytest_cache/
+htmlcov/
+.coverage
+test_out.txt
+
+# Docker
+postgres_data/
+
+# Logs
+*.log
+
+# Uploads (user data)
+uploads/
+
+# Dev utility scripts
+clean_db.py
+clean_jobs.py

@@ -1,0 +1,169 @@
+/**
+ * AutoJob AI — Dashboard Page Styles
+ */
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 1024px) {
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section {
+    margin-top: 8px;
+}
+
+.loadingState {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 48px 0;
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.sectionTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.placeholder {
+    padding: 40px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.placeholder p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* Run Automation Banner */
+.actionBanner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    background: rgba(30, 41, 59, 0.6); /* Dark slate background */
+    border: 1px solid rgba(51, 65, 85, 0.4); /* Subtle slate border */
+    border-radius: var(--radius-lg);
+    padding: 24px 32px;
+    margin-bottom: 32px;
+}
+
+.bannerText {
+    flex: 1;
+    min-width: 0;
+}
+
+.bannerText h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.bannerText p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.runBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: #59A6CB; /* Refined sleek blue to match Save button */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.runBtn:hover {
+    background: #4A8EAF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(89, 166, 203, 0.3);
+}
+
+.runBtn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+    .actionBanner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .runBtn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ── Time Saved Widget ── */
+.timeSavedBlock {
+    margin-top: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeSavedLabel {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.timeSavedValue {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+}

@@ -1,0 +1,110 @@
+/**
+ * AutoJob AI — Stat Card Styles
+ */
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Hover effect: Increased lift and bright white diffuse glow as requested */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.1), 0 0 15px rgba(255, 255, 255, 0.05);
+    /* White glow */
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.leftSection {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Accent bar inside the left section (not touching edge) */
+.accentBar {
+    width: 3px;
+    height: 48px;
+    border-radius: 4px;
+}
+
+/* Content */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.label {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    color: var(--text-secondary);
+}
+
+.value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+/* Icon container */
+.iconWrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.04);
+    flex-shrink: 0;
+}
+
+/* ── Variants ─────────────────────────────────── */
+
+.primary .accentBar {
+    background: var(--color-primary);
+}
+
+.primary .iconWrap {
+    color: var(--color-primary);
+}
+
+.success .accentBar {
+    background: var(--color-success);
+}
+
+.success .iconWrap {
+    color: var(--color-success);
+}
+
+.warning .accentBar {
+    background: var(--color-warning);
+}
+
+.warning .iconWrap {
+    color: var(--color-warning);
+}
+
+.error .accentBar {
+    background: var(--color-error);
+}
+
+.error .iconWrap {
+    color: var(--color-error);
+}
+
+.info .accentBar {
+    background: var(--color-info);
+}
+
+.info .iconWrap {
+    color: var(--color-info);
+}

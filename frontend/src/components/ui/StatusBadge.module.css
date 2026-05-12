@@ -1,0 +1,51 @@
+/**
+ * AutoJob AI — Status Badge Styles
+ */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+/* ── Variants ─────────────────────────────────── */
+
+.success {
+    background: var(--color-success-bg);
+    color: var(--color-success);
+}
+
+.warning {
+    background: var(--color-warning-bg);
+    color: var(--color-warning);
+}
+
+.error {
+    background: var(--color-error-bg);
+    color: var(--color-error);
+}
+
+.info {
+    background: var(--color-info-bg);
+    color: var(--color-info);
+}
+
+.primary {
+    background: rgba(99, 102, 241, 0.12);
+    color: var(--color-primary-light);
+}
+
+.accent {
+    background: rgba(6, 182, 212, 0.12);
+    color: var(--color-accent-light);
+}
+
+.muted {
+    background: rgba(113, 113, 122, 0.12);
+    color: var(--text-tertiary);
+}

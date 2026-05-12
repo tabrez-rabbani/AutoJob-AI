@@ -1,0 +1,164 @@
+.chartsGrid {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.chartCard {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 66% width */
+.colSpan2 {
+    flex: 2;
+}
+
+/* 33% width */
+.sideCharts {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chartHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.chartTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.chartSubtitle {
+    font-size: 13px;
+    color: var(--text-tertiary);
+    margin-top: 2px;
+}
+
+.chartContainer {
+    width: 100%;
+    height: 300px;
+    min-height: 300px;
+    flex: 1;
+}
+
+.pieContainer {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.funnelContainer {
+    width: 100%;
+    flex: 1;
+}
+
+/* Tooltip Styles */
+.customTooltip {
+    background-color: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tooltipLabel {
+    color: #94a3b8;
+    font-size: 12px;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.tooltipValue {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tooltipDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Legend Styles */
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legendColor {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+}
+
+.legendName {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.legendValue {
+    font-size: 13px;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .chartsGrid {
+        flex-direction: column;
+    }
+    .colSpan2 {
+        flex: none;
+        width: 100%;
+    }
+    .sideCharts {
+        flex: none;
+        width: 100%;
+    }
+    .chartContainer, .funnelContainer {
+        flex: none !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .chartContainer {
+        height: 220px;
+        min-height: 220px;
+    }
+}
+
+.emptyState {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--text-tertiary);
+    font-size: 14px;
+    font-weight: 500;
+}

@@ -1,0 +1,215 @@
+/**
+ * AutoJob AI — Sidebar Styles
+ * Premium dark sidebar with glassmorphism and glow effects.
+ */
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-default);
+    padding: 24px 16px;
+    z-index: 50;
+    overflow-y: auto;
+}
+
+/* ── Brand ────────────────────────────────────── */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 8px 24px;
+    border-bottom: 1px solid var(--border-default);
+    margin-bottom: 24px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-glow);
+}
+
+.logoIcon {
+    font-size: 20px;
+}
+
+.brandName {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.brandTag {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ── Navigation ───────────────────────────────── */
+
+.nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.navLabel {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    letter-spacing: 1.5px;
+    padding: 0 12px;
+    margin-bottom: 8px;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    transition: all var(--transition-fast);
+}
+
+.navLink:hover {
+    background: rgba(30, 41, 59, 0.4);
+    color: var(--text-primary);
+}
+
+.navLink.active {
+    background: rgba(30, 41, 59, 0.8);
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.navIcon {
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+}
+
+.activeIndicator {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 24px;
+    border-radius: var(--radius-full);
+    background: #59A6CB; /* Refined sleek blue */
+}
+
+/* ── User Section ─────────────────────────────── */
+
+.userSection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 8px 0;
+    border-top: 1px solid var(--border-default);
+    margin-top: 12px;
+}
+
+.userAvatar {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+}
+
+.userInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.userName {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.userEmail {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.logoutBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px;
+    opacity: 0.5;
+    transition: opacity var(--transition-fast);
+}
+
+.logoutBtn:hover {
+    opacity: 1;
+}
+
+/* ── Mobile Sidebar Styles ─────────────────────── */
+
+.closeBtnMobile {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 4px;
+    margin-left: auto;
+    transition: color var(--transition-fast);
+}
+
+.closeBtnMobile:hover {
+    color: var(--text-primary);
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: none;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .closeBtnMobile {
+        display: block;
+    }
+}

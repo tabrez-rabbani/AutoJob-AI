@@ -1,0 +1,72 @@
+/**
+ * AutoJob AI — Dashboard Layout Styles
+ */
+
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.main {
+    flex: 1;
+    margin-left: 260px;
+    padding: 24px 32px;
+    max-width: 1200px;
+    min-width: 0;
+    min-height: 100vh;
+}
+
+/* ── Mobile Header ──────────────────────────────── */
+
+.mobileHeader {
+    display: none;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-default);
+}
+
+.menuBtn {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+/* ── Overlay ────────────────────────────────────── */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 40; /* Below sidebar (z-index: 50) */
+    opacity: 0;
+    animation: fadeIn 0.2s ease forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* ── Responsive ─────────────────────────────────── */
+
+@media (max-width: 1024px) {
+    .main {
+        margin-left: 0;
+        padding: 16px;
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    .mobileHeader {
+        display: flex;
+    }
+}

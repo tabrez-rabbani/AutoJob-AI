@@ -1,0 +1,651 @@
+/**
+ * AutoJob AI — Automation Modal Styles (Premium E-commerce Style)
+ */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.85);
+    /* Darker backdrop */
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 24px;
+}
+
+.modal {
+    background: #1e2025;
+    /* Very dark background to match body */
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    /* Sharper corners */
+    width: 100%;
+    max-width: 900px;
+    /* Wider modal to prevent scrolling */
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.modalInner {
+    background: #262932;
+    /* Core card background from screenshot */
+    margin: 20px;
+    border-radius: 8px;
+    padding: 24px 32px;
+}
+
+/* Sleek scrollbar inside modal */
+.modal::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+/* ── Header ──────────────────────────────── */
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.headerTitle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Blue vertical line accent from screenshot */
+.headerTitle::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 20px;
+    background-color: #59A6CB;
+    /* Blue accent matching e-commerce */
+    border-radius: 2px;
+}
+
+.headerTitle h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.2px;
+}
+
+.closeBtn {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeBtn:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Form Layout (Horizontal) ────────────── */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputGroup {
+    display: flex;
+    align-items: center;
+    /* Horizontally aligned */
+    gap: 20px;
+}
+
+.label {
+    width: 220px;
+    flex-shrink: 0;
+    font-size: 16px;
+    /* Increased from 15px */
+    font-weight: 500;
+    /* Increased to bold/medium */
+    color: #f1f5f9;
+    /* Lighter white for more pop */
+}
+
+.inputContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input {
+    width: 100%;
+    padding: 14px 16px;
+    /* Increased padding */
+    background: transparent;
+    border: 1px solid #4b5563;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 16px;
+    /* Increased from 15px */
+    font-weight: 500;
+    /* Bolder text inside input */
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.input:focus {
+    border-color: #59A6CB;
+    box-shadow: 0 0 0 1px #59A6CB;
+    /* Subtle glow */
+}
+
+.input::placeholder {
+    color: #94a3b8;
+    /* Brighter placeholder */
+    font-weight: 400;
+}
+
+/* Select dropdown styling for dark theme */
+select.input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+select.input option {
+    background: #1e2025;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.fieldHint {
+    font-size: 13px;
+    /* Increased from 11px */
+    color: #cbd5e1;
+    /* Brighter hint text */
+}
+
+/* ── Toggle Switch ───────────────────────── */
+.toggleRow {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 12px;
+}
+
+.toggleLabelWrap {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.toggleLabel {
+    width: 220px;
+    flex-shrink: 0;
+    font-size: 16px;
+    /* Increased from 15px */
+    font-weight: 500;
+    color: #f1f5f9;
+}
+
+.toggleSwitch {
+    position: relative;
+    display: inline-block;
+    width: 38px;
+    height: 20px;
+}
+
+.toggleSwitch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4b5563;
+    transition: .3s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #59A6CB;
+}
+
+input:checked+.slider:before {
+    transform: translateX(18px);
+}
+
+/* ── Platform Selection Buttons ───────────── */
+.platformGrid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.platformBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-default);
+    background: var(--card-bg);
+    transition: all 0.2s ease;
+    flex: 1;
+    min-width: 160px;
+    justify-content: center;
+    user-select: none;
+}
+
+.platformBtn:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.platformBtn.active {
+    background: rgba(89, 166, 203, 0.1);
+    border-color: #59A6CB;
+    box-shadow: 0 0 12px rgba(89, 166, 203, 0.2);
+}
+
+.platformBtn.activeNaukri {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: #10b981;
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.2);
+}
+
+.platformName {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.platformBtn.active .platformName {
+    color: #59A6CB;
+}
+
+.platformBtn.activeNaukri .platformName {
+    color: #10b981;
+}
+
+.platformLimit {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* ── Form Areas & Credentials Grids ───────── */
+.platformsSection {
+    margin-bottom: 20px;
+    background: rgba(99, 102, 241, 0.05);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.credsSectionLinkedin {
+    margin-top: 14px;
+    padding: 16px;
+    background: rgba(89, 166, 203, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(89, 166, 203, 0.15);
+}
+
+.credsSectionNaukri {
+    margin-top: 14px;
+    padding: 16px;
+    background: rgba(16, 185, 129, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.modeWrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.credentialsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+
+/* ── Upload Zone ─────────────────────────── */
+.uploadZone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 20px;
+    border: 1px dashed #4b5563;
+    border-radius: 6px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #94a3b8;
+    font-size: 13px;
+    text-align: center;
+}
+
+.uploadZone:hover {
+    border-color: #59A6CB;
+    background: rgba(89, 166, 203, 0.05);
+}
+
+.uploadZoneSuccess {
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.fileInput {
+    display: none;
+}
+
+.uploadIcon {
+    color: #64748b;
+}
+
+.uploadIconSuccess {
+    color: #59A6CB;
+}
+
+.uploadFileName {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.uploadHint {
+    font-size: 11px;
+    color: #64748b;
+}
+
+/* ── Top Button Style (from screenshot) ──── */
+.headerActions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.submitBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #59A6CB;
+    /* New solid background color */
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.submitBtn:hover:not(:disabled) {
+    background: #4A8EAF;
+    /* Slightly darker shade on hover */
+    transform: translateY(-1px);
+}
+
+.submitBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: rgba(255, 255, 255, 0.05);
+    /* Greyed out background for disabled */
+}
+
+/* ── Error & States ──────────────────────── */
+.errorBanner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #fca5a5;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+/* ── Running/Results State ───────────────── */
+.runningState,
+.resultsState {
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.runningState h3,
+.resultsState h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 16px 0 8px;
+}
+
+.runningState p {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.spinner {
+    color: #59A6CB;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.successIcon {
+    color: #22c55e;
+    margin: 0 auto;
+}
+
+.resultMessage {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-bottom: 24px;
+}
+
+.statsRow {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.statValue {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.statLabel {
+    font-size: 11px;
+    color: #64748b;
+    text-transform: uppercase;
+}
+
+/* ── Progress Stats ──────────────────────── */
+.progressStatsRow {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 24px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.progressStat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.progressStat span {
+    font-size: 11px;
+    color: #64748b;
+    text-transform: uppercase;
+}
+
+.progressStat strong {
+    font-size: 18px;
+    color: #f1f5f9;
+}
+
+.runningHint {
+    margin-top: 24px;
+    color: #59A6CB !important;
+    font-size: 13px;
+    font-style: italic;
+}
+
+/* ── Responsive ──────────────────────────── */
+@media (max-width: 640px) {
+    .overlay {
+        padding: 12px;
+    }
+
+    .modalInner {
+        padding: 20px 16px;
+        margin: 0;
+    }
+
+    .inputGroup {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+        width: 100%;
+    }
+
+    .inputContainer {
+        width: 100%;
+    }
+
+    .label {
+        width: auto;
+        font-size: 14px;
+    }
+
+    .toggleRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .toggleLabelWrap {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .toggleLabel {
+        width: auto;
+        min-width: 100px;
+        font-size: 14px;
+        margin-right: auto;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .headerActions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .platformGrid {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .credentialsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .modeWrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .platformsSection,
+    .credsSectionLinkedin,
+    .credsSectionNaukri {
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 0 16px 0 !important;
+    }
+}

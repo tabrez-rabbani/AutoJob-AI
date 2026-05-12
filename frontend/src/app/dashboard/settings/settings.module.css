@@ -1,0 +1,425 @@
+/**
+ * AutoJob AI — Settings Page Styles (Premium Dark Theme)
+ */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* ── Section Block ───────────────────────────── */
+.card {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-bottom: 36px;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cardTitle {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+.cardDescription {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+/* ── Form Layout ─────────────────────────────── */
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formGroupFull {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    grid-column: 1 / -1;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.input {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--bg-tertiary);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-glow);
+}
+
+.input::placeholder {
+    color: var(--text-tertiary);
+}
+
+.inputHint {
+    font-size: 12px;
+    color: var(--text-tertiary);
+}
+
+/* ── Tags / Chips ────────────────────────────── */
+.tagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: rgba(30, 41, 59, 0.8); /* Dark slate blue */
+    border: 1px solid rgba(51, 65, 85, 0.6); /* Slate border */
+    border-radius: 20px;
+    color: #cbd5e1; /* Light slate text */
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.tagRemove {
+    background: none;
+    border: none;
+    color: #94a3b8; /* Muted slate */
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.tagRemove:hover {
+    opacity: 1;
+    color: #ef4444; /* Subtle red on hover for delete action */
+}
+
+.tagInput {
+    display: flex;
+    gap: 8px;
+}
+
+.tagInput .input {
+    flex: 1;
+}
+
+.addBtn {
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.08); /* Dark subtle background */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Very subtle border */
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.addBtn:hover {
+    background: rgba(255, 255, 255, 0.12); /* Slightly brighter on hover */
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+}
+
+/* ── Resume Upload Zone ──────────────────────── */
+.resumeZone {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 24px;
+    background: var(--bg-tertiary);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.resumeZone:hover {
+    border-color: var(--color-primary);
+    background: rgba(99, 102, 241, 0.05);
+}
+
+.resumeIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: rgba(99, 102, 241, 0.12);
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.resumeInfo {
+    flex: 1;
+}
+
+.resumeName {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.resumeHint {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    margin-top: 2px;
+}
+
+.resumeStatus {
+    font-size: 13px;
+    color: var(--color-success);
+    font-weight: 500;
+}
+
+.fileInput {
+    display: none;
+}
+
+/* ── Save Button ─────────────────────────────── */
+.saveRow {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.saveBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: #59A6CB;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.saveBtn:hover:not(:disabled) {
+    background: #4A8EAF;
+    transform: translateY(-1px);
+}
+
+.saveBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ── Success / Error Messages ────────────────── */
+.successMsg {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: var(--color-success-bg);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 8px;
+    color: var(--color-success);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.errorMsg {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: var(--color-error-bg);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 8px;
+    color: var(--color-error);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ── Account Info ────────────────────────────── */
+.accountRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.accountRow:last-child {
+    border-bottom: none;
+}
+
+.accountLabel {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.accountValue {
+    font-size: 14px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.tierBadge {
+    display: inline-flex;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(99, 102, 241, 0.12);
+    color: var(--color-primary-light);
+}
+
+/* ── Loading ─────────────────────────────────── */
+.loadingState {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 48px 0;
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 768px) {
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .resumeZone {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ── Step & Manual Badges ────────────────────── */
+.stepBadge {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--color-primary-light);
+    vertical-align: middle;
+}
+
+.manualBadge {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(245, 158, 11, 0.12);
+    color: #f59e0b;
+    vertical-align: middle;
+}
+
+/* ── Removed card icon logic, keeping primary accent logic if needed ────── */
+
+/* ── Resume Zone States ──────────────────────── */
+.resumeZoneUploaded {
+    border-style: solid;
+    border-color: rgba(16, 185, 129, 0.2);
+    background: rgba(16, 185, 129, 0.04);
+}
+
+.resumeZoneUploaded:hover {
+    border-color: rgba(16, 185, 129, 0.4);
+    background: rgba(16, 185, 129, 0.08);
+}
+
+/* ── AI Sparkle Animation ────────────────────── */
+.sparkle {
+    color: #f59e0b;
+    animation: sparkle 1.5s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+        opacity: 0.6;
+        transform: scale(0.95);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+/* ── Info Tip (no-resume hint) ────────────────── */
+.infoTip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: rgba(99, 102, 241, 0.06);
+    border: 1px solid rgba(99, 102, 241, 0.1);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 13px;
+}

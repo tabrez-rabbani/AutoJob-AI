@@ -1,0 +1,202 @@
+/**
+ * AutoJob AI — Search & Filters Styles
+ * Premium dark theme matching the refined sidebar and dashboard.
+ */
+
+.container {
+    margin-bottom: 24px;
+}
+
+/* ── Search Row ──────────────────────────────── */
+.searchRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.searchBox {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(51, 65, 85, 0.4);
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.searchBox:focus-within {
+    border-color: #59A6CB;
+    box-shadow: 0 0 0 2px rgba(89, 166, 203, 0.15);
+}
+
+.searchIcon {
+    color: var(--text-tertiary);
+    flex-shrink: 0;
+}
+
+.searchInput {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.searchInput::placeholder {
+    color: var(--text-tertiary);
+}
+
+.clearBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    padding: 2px;
+    transition: color 0.2s;
+}
+
+.clearBtn:hover {
+    color: var(--text-primary);
+}
+
+/* ── Filter Toggle Button ────────────────────── */
+.filterToggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(51, 65, 85, 0.4);
+    border-radius: 10px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.filterToggle:hover {
+    background: rgba(30, 41, 59, 0.8);
+    color: var(--text-primary);
+}
+
+.filterToggleActive {
+    background: rgba(30, 41, 59, 0.8);
+    border-color: #59A6CB;
+    color: var(--text-primary);
+}
+
+/* ── Clear All Button ────────────────────────── */
+.clearAllBtn {
+    padding: 10px 16px;
+    background: transparent;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 10px;
+    color: #ef4444;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.clearAllBtn:hover {
+    background: rgba(239, 68, 68, 0.08);
+    border-color: rgba(239, 68, 68, 0.5);
+}
+
+/* ── Filter Panel (Collapsible) ──────────────── */
+.filterPanel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+    padding: 20px;
+    background: rgba(30, 41, 59, 0.3);
+    border: 1px solid rgba(51, 65, 85, 0.3);
+    border-radius: 12px;
+    animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.filterGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 140px;
+    flex: 1;
+}
+
+.filterLabel {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filterSelect,
+.filterInput {
+    padding: 8px 12px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(51, 65, 85, 0.4);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.filterSelect:focus,
+.filterInput:focus {
+    border-color: #59A6CB;
+}
+
+.filterSelect option {
+    background: #1e293b;
+    color: var(--text-primary);
+}
+
+/* ── Date input customization for dark theme ── */
+.filterInput[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.7);
+    cursor: pointer;
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 768px) {
+    .searchRow {
+        flex-wrap: wrap;
+    }
+
+    .searchBox {
+        width: 100%;
+        flex: unset;
+    }
+
+    .filterPanel {
+        flex-direction: column;
+    }
+
+    .filterGroup {
+        min-width: unset;
+    }
+}

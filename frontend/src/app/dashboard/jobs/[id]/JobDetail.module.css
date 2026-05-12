@@ -1,0 +1,287 @@
+/**
+ * AutoJob AI — Job Detail Page Styles
+ * Premium dark theme matching the dashboard.
+ */
+
+.loadingState {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 80px 0;
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.errorState {
+    text-align: center;
+    padding: 80px 0;
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+
+.container {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ── Back Button ─────────────────────────────── */
+.backBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(51, 65, 85, 0.4);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: fit-content;
+}
+
+.backBtn:hover {
+    background: rgba(30, 41, 59, 0.8);
+    color: var(--text-primary);
+}
+
+/* ── Main Card ───────────────────────────────── */
+.mainCard {
+    padding: 28px;
+    background: rgba(30, 41, 59, 0.3);
+    border: 1px solid rgba(51, 65, 85, 0.3);
+    border-radius: 14px;
+}
+
+.jobHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.jobTitleSection {
+    flex: 1;
+}
+
+.jobTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+}
+
+.companyName {
+    font-size: 16px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.headerActions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.applyBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #59A6CB;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.applyBtn:hover {
+    background: #4A8EAF;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(89, 166, 203, 0.3);
+}
+
+/* ── Meta Tags ───────────────────────────────── */
+.metaTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.metaTag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(51, 65, 85, 0.3);
+    border-radius: 20px;
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* ── Score Section ───────────────────────────── */
+.scoreSection {
+    padding-top: 20px;
+    border-top: 1px solid rgba(51, 65, 85, 0.3);
+}
+
+.scoreHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.scoreLabel {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.scoreValue {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.scoreBarBg {
+    height: 8px;
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.scoreBarFill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.6s ease;
+}
+
+/* ── Section Card ────────────────────────────── */
+.sectionCard {
+    padding: 28px;
+    background: rgba(30, 41, 59, 0.3);
+    border: 1px solid rgba(51, 65, 85, 0.3);
+    border-radius: 14px;
+}
+
+.sectionTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+}
+
+.description {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.8;
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 16px;
+    /* Custom Scrollbar for Description */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(89, 166, 203, 0.5) rgba(15, 23, 42, 0.3);
+}
+
+.description::-webkit-scrollbar {
+    width: 6px;
+}
+
+.description::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.3);
+    border-radius: 4px;
+}
+
+.description::-webkit-scrollbar-thumb {
+    background-color: rgba(89, 166, 203, 0.5);
+    border-radius: 4px;
+}
+
+.description::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(89, 166, 203, 0.8);
+}
+
+.description p {
+    margin-bottom: 13px;
+}
+
+.description p:last-child {
+    margin-bottom: 0;
+}
+
+.noData {
+    color: var(--text-tertiary);
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* ── Info Grid ───────────────────────────────── */
+.infoGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.infoItem {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.infoLabel {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.infoValue {
+    font-size: 14px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 768px) {
+    .jobHeader {
+        flex-direction: column;
+    }
+
+    .headerActions {
+        width: 100%;
+    }
+
+    .applyBtn {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .metaTags {
+        gap: 8px;
+    }
+}

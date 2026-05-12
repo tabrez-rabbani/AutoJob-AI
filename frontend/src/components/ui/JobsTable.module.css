@@ -1,0 +1,216 @@
+/**
+ * AutoJob AI — Jobs Table Styles
+ */
+
+.tableWrapper {
+    background: var(--bg-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+}
+
+.tableTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.overflowContainer {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left;
+}
+
+/* Headers */
+.table th {
+    padding: 12px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    white-space: nowrap;
+}
+
+/* Rows & Cells */
+.table td {
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    vertical-align: middle;
+}
+
+.row {
+    transition: background-color var(--transition-fast);
+}
+
+.row:hover {
+    background-color: var(--bg-hover);
+}
+
+.row:last-child td {
+    border-bottom: none;
+}
+
+/* Specific Cell Content */
+.roleCell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.jobTitle {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.company {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.textSecondary {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* Match Score View */
+.scoreWrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.scoreBarBg {
+    width: 60px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.scoreBarFill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 1s ease-out;
+}
+
+.scoreText {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 32px;
+}
+
+/* Actions */
+.alignRight {
+    text-align: right;
+}
+
+.actionBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.03);
+    transition: all var(--transition-fast);
+}
+
+.actionBtn:hover {
+    color: var(--color-primary-light);
+    background: rgba(99, 102, 241, 0.1);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+    .tableWrapper {
+        padding: 12px;
+        background: transparent;
+        border: none;
+    }
+
+    .tableTitle {
+        padding-left: 4px;
+    }
+
+    .overflowContainer {
+        overflow-x: visible;
+    }
+
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table thead {
+        display: none;
+    }
+
+    .row {
+        margin-bottom: 16px;
+        background: var(--bg-secondary);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 16px;
+        position: relative;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .row:hover {
+        border-color: rgba(99, 102, 241, 0.3);
+        transform: translateY(-2px);
+    }
+
+    .table td {
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+    }
+
+    .table td:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .table td:first-child {
+        padding-top: 0;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        font-size: 12px;
+        color: var(--text-tertiary);
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        margin-right: 16px;
+        text-align: left;
+    }
+
+    /* Target specific cells for better UI on mobile */
+    .roleCell {
+        text-align: right;
+        align-items: flex-end;
+    }
+
+    .scoreWrap {
+        justify-content: flex-end;
+    }
+
+    .alignRight {
+        text-align: right;
+    }
+}

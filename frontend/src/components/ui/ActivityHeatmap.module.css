@@ -1,0 +1,116 @@
+.heatmapCard {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.header {
+    margin-bottom: 24px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.subtitle {
+    font-size: 13px;
+    color: var(--text-tertiary);
+    margin-top: 4px;
+    display: block;
+}
+
+.heatmapWrapper {
+    display: flex;
+    gap: 12px;
+}
+
+.dayLabels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 24px; /* match month label offset */
+    font-size: 11px;
+    color: #64748b;
+    height: 104px; /* Matches 7 blocks of 12px + gaps */
+}
+
+.gridContainer {
+    flex: 1;
+    overflow-x: auto;
+    /* Hide scrollbar for seamless look */
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+.gridContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.monthLabels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #64748b;
+    margin-bottom: 8px;
+    padding-right: 12px; /* slight offset so Dec doesn't clip */
+}
+
+.squaresGrid {
+    display: grid;
+    /* 52 columns for a year */
+    grid-template-columns: repeat(52, 1fr);
+    /* 7 rows for days */
+    grid-template-rows: repeat(7, 12px);
+    gap: 4px;
+    /* ensure grid takes up necessary width */
+    min-width: 780px; 
+}
+
+.square {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.05); /* Level 0: dark grey */
+    transition: all 0.2s ease;
+}
+
+.square:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Base neon colors for the green github feel */
+.level0 { background-color: rgba(255, 255, 255, 0.05); } 
+.level1 { background-color: #064e3b; } /* Dark emerald */
+.level2 { background-color: #059669; } /* Emerald */
+.level3 { background-color: #10b981; } /* Bright emerald */
+.level4 { background-color: #34d399; } /* Super bright emerald/glow */
+
+/* Fun alternative - AutoJob Blue Theme:
+.level1 { background-color: #1e3a8a; } 
+.level2 { background-color: #2563eb; } 
+.level3 { background-color: #3b82f6; } 
+.level4 { background-color: #60a5fa; } 
+I'm using GitHub Green though as users recognize it immediately as "Work".
+*/
+
+.legend {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    font-size: 11px;
+    color: #64748b;
+}
+
+@media (max-width: 640px) {
+    .heatmapCard {
+        padding: 16px;
+    }
+}
